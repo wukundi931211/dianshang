@@ -1,5 +1,6 @@
 package com.bawei.tablayoutdemo;
 
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -7,7 +8,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.bawei.tablayoutdemo.fragment.FragmentOne;
 
@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
+
+
     class MyViewPagerAdapter extends FragmentPagerAdapter {
 
         private final String[] title = new String[]{
@@ -42,9 +44,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             if (position == 0) {
+                    //TODO
 
             }
             if (position == 1) {
+                    //TODO
 
             }
             return FragmentOne.newInstance(title[position], "");
