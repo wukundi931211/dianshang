@@ -14,14 +14,15 @@ import com.bawei.tablayoutdemo.fragment.FragmentOne;
 public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
-
+    TiitleBar bar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tabLayout = findViewById(R.id.tablelayout);
+        tabLayout = findViewById(R.id.tablelayout01);
         viewPager = findViewById(R.id.vp);
+        bar = findViewById(R.id.main_titlebar);
 
         MyViewPagerAdapter adapter = new MyViewPagerAdapter(getSupportFragmentManager());
         //关联
@@ -44,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             if (position == 0) {
-                    //TODO
+
 
             }
             if (position == 1) {
-                    //TODO
+
 
             }
             return FragmentOne.newInstance(title[position], "");
